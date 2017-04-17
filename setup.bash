@@ -19,7 +19,11 @@ echo "DIR: $DIR"
 
 vimrc="$HOME/.vimrc"
 
+confirm "install vim tmux ipython3?" && sudo apt install vim tmux ipython3
+
 confirm "replace $vimrc?" && cp $DIR/vimrc $vimrc
+
+
 
 
 # read -r -p "copy \"$DIR/vimrc\" to \"$vimrc\"? [y/N] " response
