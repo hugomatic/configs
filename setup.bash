@@ -31,8 +31,8 @@ vimrc="$HOME/.vimrc"
 
 confirm "install vim tmux ipython3?" && sudo apt install vim tmux ipython3
 
-confirm "setup git user?" git config --global user.email "$email" && \
-  git config --global user.name "Hugo Boyer"
+confirm "setup git user/email (hugomatic/$email)?" && git config --global user.email "$email" && \
+  git config --global user.name "hugomatic"
 
 confirm "replace $vimrc?" && cp $DIR/vimrc $vimrc
 
