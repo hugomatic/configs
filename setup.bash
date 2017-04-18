@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+email="hugo@hugomatic.ca"
+if [ -z "$1" ]
+  then
+    echo "no email supplied"
+  else
+    email=$1
+fi
+
+echo "your email: $email"
+
 confirm() {
     # call with a prompt string or use a default
     read -r -p "${1:-Are you sure? [y/N]} " response
@@ -20,6 +30,9 @@ echo "DIR: $DIR"
 vimrc="$HOME/.vimrc"
 
 confirm "install vim tmux ipython3?" && sudo apt install vim tmux ipython3
+
+confirm "setup git user?" git config --global user.email "$email" && \
+  git config --global user.name "Hugo Boyer"
 
 confirm "replace $vimrc?" && cp $DIR/vimrc $vimrc
 
