@@ -1,0 +1,3 @@
+
+# cmake
+cmake -DCMAKE_INSTALL_PREFIX=/media/hugo/Space/install ..
