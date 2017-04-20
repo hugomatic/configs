@@ -14,4 +14,5 @@ else
   ln -s /media/hugo/Space/install install
 fi
 
-cd $code
+# this should go through the link
+cd ~/code
