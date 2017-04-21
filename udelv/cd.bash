@@ -17,7 +17,7 @@ if [ ! -L $HOME/code ]; then
   ln -s /media/hugo/Space/code $HOME/code
 fi
 if [ ! -L $HOME/dev ]; then
-  ln -s /media/hugo/Space/code $HOME/dev
+  ln -s /media/hugo/Space/dev $HOME/dev
 fi
 if [ ! -L $HOME/local ]; then
   ln -s /media/hugo/Space/local $HOME/local
