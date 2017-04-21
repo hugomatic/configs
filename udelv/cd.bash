@@ -2,6 +2,8 @@
 
 # mounts disk if the directory is not present. needs sudo
 
+
+
 code="/media/hugo/Space/code"
 if stat $code;
 then
@@ -9,10 +11,17 @@ then
 else
   sudo mount /dev/sdb3 /media/hugo/Space
   cd ~
-  ln -s /media/hugo/Space/code code
-  ln -s /media/hugo/Space/dev dev
-  ln -s /media/hugo/Space/install install
+fi
+
+if [ ! -L $HOME/code ]; then
+  ln -s /media/hugo/Space/code $HOME/code
+fi
+if [ ! -L $HOME/dev ]; then
+  ln -s /media/hugo/Space/code $HOME/dev
+fi
+if [ ! -L $HOME/local ]; then
+  ln -s /media/hugo/Space/local $HOME/local
 fi
 
 # this should go through the link
-cd ~/code
+# cd ~/code
