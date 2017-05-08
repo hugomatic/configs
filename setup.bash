@@ -64,7 +64,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "DIR: $DIR"
 
 
-confirm "install vim tmux ipython3?" && sudo apt install vim tmux ipython3
+confirm "install vim tmux ipython3?" && sudo apt install -y vim tmux ipython3
 
 confirm "setup git user/email (hugomatic/$email)?"  \
   && git config --global user.email "$email" \
