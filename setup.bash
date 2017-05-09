@@ -63,9 +63,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "DIR: $DIR"
 
-
-confirm "install vim tmux ipython3?" && sudo apt install -y vim tmux ipython3
-
 confirm "setup git user/email (hugomatic/$email)?"  \
   && git config --global user.email "$email" \
   && git config --global user.name "hugomatic" \
@@ -75,14 +72,4 @@ confirm "setup git user/email (hugomatic/$email)?"  \
 # confirm "write $vimrc?" && cp $DIR/vimrc $vimrc
 confirm "write $vimrc?" && write_vimrc
 
-
-
-# read -r -p "copy \"$DIR/vimrc\" to \"$vimrc\"? [y/N] " response
-# response=${response,,}    # tolower
-# if [[ "$response" =~ ^(yes|y)$ ]]
-# then
-#   cp $DIR/vimrc $vimrc
-#   stat $vimrc
-# else
-#   echo "skipping vimrc"
-# fi
+confirm "install stuff?" && sudo apt install -y vim tmux ipython3 tree
