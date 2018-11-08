@@ -54,6 +54,8 @@ set viminfo='20,<1000
 " show file name in terminal
 set title
 
+" 80 character column marker
+set colorcolumn=81
 
 DELIM
 
