@@ -74,6 +74,8 @@ confirm "setup git user/email (hugomatic/$email)?"  \
 # confirm "write $vimrc?" && cp $DIR/vimrc $vimrc
 confirm "write $vimrc?" && write_vimrc
 
-confirm "install node 14?" && curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && sudo apt-get install -y nodejs
+confirm "install node 15?" && curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && sudo apt-get install -y nodejs
 
-confirm "install vim tmux tree ipython3?" && sudo apt install -y vim tmux tree ipython3
+packs="vim tmux tree ipython3 python3-pip git openssh-server"
+confirm "install $packs?" && sudo apt install -y $packs
+
