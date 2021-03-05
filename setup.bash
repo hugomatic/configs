@@ -79,3 +79,4 @@ confirm "install node 15?" && curl -sL https://deb.nodesource.com/setup_15.x | s
 packs="vim tmux tree terminator ipython3 python3-pip git openssh-server"
 confirm "install $packs?" && sudo apt install -y $packs
 
+confirm "install vcstool (requires pip3)?" && pip3 install vcstool
