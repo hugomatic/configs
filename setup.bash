@@ -76,6 +76,6 @@ confirm "write $vimrc?" && write_vimrc
 
 confirm "install node 15?" && curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && sudo apt-get install -y nodejs
 
-packs="vim tmux tree ipython3 python3-pip git openssh-server"
+packs="vim tmux tree terminator ipython3 python3-pip git openssh-server"
 confirm "install $packs?" && sudo apt install -y $packs
 
