@@ -65,6 +65,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "DIR: $DIR"
 
+packs="vim tmux tree terminator ipython3 python3-pip git openssh-server"
+confirm "install $packs?" && sudo apt install -y $packs
+
 confirm "setup git user/email (hugomatic/$email)?"  \
   && git config --global user.email "$email" \
   && git config --global user.name "hugomatic" \
@@ -75,8 +78,5 @@ confirm "setup git user/email (hugomatic/$email)?"  \
 confirm "write $vimrc?" && write_vimrc
 
 confirm "install node 15?" && curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash - && sudo apt-get install -y nodejs
-
-packs="vim tmux tree terminator ipython3 python3-pip git openssh-server"
-confirm "install $packs?" && sudo apt install -y $packs
 
 confirm "install vcstool (requires pip3)?" && pip3 install vcstool
