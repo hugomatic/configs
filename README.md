@@ -10,5 +10,5 @@ one line install (no interactive prompt)
 
 ~~~
 wget https://raw.githubusercontent.com/hugomatic/configs/master/setup.bash
-. setup.bash hugo.boyer@giant.ai
+. setup.bash hugo@hugomatic.ca
 ~~~
