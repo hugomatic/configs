@@ -77,7 +77,7 @@ confirm "setup git user/email (hugomatic/$email)?"  \
 # confirm "write $vimrc?" && cp $DIR/vimrc $vimrc
 confirm "write $vimrc?" && write_vimrc
 
-confirm "install node 18?" && curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs
+confirm "install node 14?" && curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && sudo apt-get install -y nodejs
 
 confirm "install vcstool (requires pip3)?" && pip3 install vcstool
 
